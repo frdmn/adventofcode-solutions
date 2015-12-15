@@ -6,7 +6,7 @@ var input = require('./input/day2.js');
 var giftDimensions = input.split('\n'),
     totalPaper = 0;
 
-// For each character in puzzle input
+// For each gift in puzzle input
 for (var i = 0; i < giftDimensions.length; i++) {
   // Split each dimension line in each parts (width, heigth, length)
   var currentDimension = giftDimensions[i],
