@@ -31,25 +31,21 @@ function checkDuplicateLetters(string){
   return false;
 }
 
-var niceStrings = strings;
+var niceStrings = JSON.parse(JSON.stringify(strings));
 
 // For each gift in puzzle input
 for (var i = 0; i < strings.length; i++) {
   // Split each dimension line in each parts (width, heigth, length)
   var currentString = strings[i];
 
-  // Check if currentString has at least three vowels
+  // Check if currentString has at least three vowels ...
   if (getVowelCount(currentString) < 3) {
     niceStrings.splice(niceStrings.indexOf(currentString), 1);
-  }
-
-  // Check if there are any duplicate letters
-  if (!checkDuplicateLetters(currentString)) {
+  // ... or if there are any duplicate letters
+  } else if (!checkDuplicateLetters(currentString)) {
     niceStrings.splice(niceStrings.indexOf(currentString), 1);
-  }
-
-  // Check if string doesn't contain 'ab', 'cd', 'pq' or 'xy'
-  if (currentString.match(/ab/g) || currentString.match(/cd/g) || currentString.match(/pq/g) || currentString.match(/xy/g)) {
+  // ... or if string doesn't contain 'ab', 'cd', 'pq' or 'xy'
+  } else if (currentString.match(/ab/g) || currentString.match(/cd/g) || currentString.match(/pq/g) || currentString.match(/xy/g)) {
     niceStrings.splice(niceStrings.indexOf(currentString), 1);
   }
 };
