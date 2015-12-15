@@ -2,7 +2,7 @@
 var input = require('./input/day3.js');
 
 /* Variables */
-var santasVisits = [],
+var santasVisits = [ [ 0, 0 ] ],
     coordX = 0,
     coordY = 0;
 
