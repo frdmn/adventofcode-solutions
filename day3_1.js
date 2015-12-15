@@ -44,3 +44,4 @@ for (var i = 0; i < input.length; i++) {
 
 // Call unique() function to sort out duplicate visits
 console.log(unique(santasVisits).length);
+// ==> 2572
