@@ -1,7 +1,7 @@
-// Puzzle input - check /input/day1.js
+/* Puzzle input - check /input/day1.js */
 var input = require('./input/day1.js');
 
-// Variables
+/* Variables */
 var currentFloor = 0,
     basementLevel;
 
