@@ -2,7 +2,7 @@
 var input = require('./input/day3.js');
 
 /* Variables */
-var santasVisits = [ [ 0, 0 ] ],
+var santasVisits = [ '0,0' ],
     coordX = 0,
     coordY = 0;
 
@@ -38,10 +38,8 @@ for (var i = 0; i < input.length; i++) {
     coordY--;
   }
 
-  // Store coordination pair
-  var currentLocation = [coordX, coordY];
-  // ... and push to santasVisits array
-  santasVisits.push(currentLocation);
+  // push current location coordinates to santasVisits array
+  santasVisits.push(coordX + ',' + coordY);
 };
 
 // Call unique() function to sort out duplicate visits
