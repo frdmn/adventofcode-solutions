@@ -1,0 +1,17 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day1_1.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.frd.mn:frdmn/advent-of-code.git"
+  },
+  "author": "Jonas Friedmann <jonas.friedmann@gmail.com>",
+  "license": "MIT"
+}
