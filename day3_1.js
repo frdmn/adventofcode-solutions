@@ -33,7 +33,7 @@ for (var i = 0; i < input.length; i++) {
   } else if (nextDirection === '^') {
     // to north => Y axis + 1
     coordY++;
-  } else if (nextDirection === '^') {
+  } else if (nextDirection === 'v') {
     // to south => Y axis - 1
     coordY--;
   }
