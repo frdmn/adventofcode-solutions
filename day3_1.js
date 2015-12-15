@@ -8,13 +8,13 @@ var santasVisits = [ [ 0, 0 ] ],
 
 // Function to uniquify an array
 function unique(array){
-  var uniqueArray = array;
+  var uniqueArray = [];
 
   for (var i = 0; i < array.length; i++) {
-    if (uniqueArray.indexOf(array[i] !== -1)) {
-      uniqueArray.splice(i, 1);
-    };
-  };
+    if (uniqueArray.indexOf(array[i]) === -1) {
+      uniqueArray.push(array[i]);
+    }
+  }
 
   return uniqueArray;
 }
