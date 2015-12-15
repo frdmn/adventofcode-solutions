@@ -47,6 +47,11 @@ for (var i = 0; i < strings.length; i++) {
   if (!checkDuplicateLetters(currentString)) {
     niceStrings.splice(niceStrings.indexOf(currentString), 1);
   }
+
+  // Check if string doesn't contain 'ab', 'cd', 'pq' or 'xy'
+  if (currentString.match(/ab/g) || currentString.match(/cd/g) || currentString.match(/pq/g) || currentString.match(/xy/g)) {
+    niceStrings.splice(niceStrings.indexOf(currentString), 1);
+  }
 };
 
 console.log(niceStrings.length);
