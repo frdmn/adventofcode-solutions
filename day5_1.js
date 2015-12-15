@@ -19,6 +19,18 @@ function getVowelCount(string){
   return count;
 }
 
+// Function to check a string for duplicate occurances of one of it's letters
+function checkDuplicateLetters(string){
+  for (var i = 0; i < string.length; i++) {
+    var letter = string[i];
+    var regExp = new RegExp(letter + letter, 'g');
+    if (string.match(regExp)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 var niceStrings = strings;
 
 // For each gift in puzzle input
@@ -30,6 +42,11 @@ for (var i = 0; i < strings.length; i++) {
   if (getVowelCount(currentString) < 3) {
     niceStrings.splice(niceStrings.indexOf(currentString), 1);
   }
+
+  // Check if there are any duplicate letters
+  if (!checkDuplicateLetters(currentString)) {
+    niceStrings.splice(niceStrings.indexOf(currentString), 1);
+  }
 };
 
-console.log(niceStrings);
+console.log(niceStrings.length);
