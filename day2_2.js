@@ -4,13 +4,13 @@ var input = require('./input/day2.js');
 /* Variables */
 // Split input by new line character ("\n")
 var giftDimensions = input.split('\n'),
-    smallestArea = 100000, // make sure this is ... huge?
     totalRibbon = 0;
 
 // For each character in puzzle input
 for (var i = 0; i < giftDimensions.length; i++) {
   // Split each dimension line in each parts (width, heigth, length)
   var currentDimension = giftDimensions[i],
+      smallestArea = 100000, // make sure this is huge
       dimensionParts = currentDimension.split('x');
 
   // Store w, h and l in variables
