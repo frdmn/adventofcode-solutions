@@ -15,7 +15,9 @@ var totalInstructions = input.split('\n');
 
 /* Functions */
 
-function toggleCoordinateRange(coordinates, from, to, state) {
+// Function that takes the coordination array, start and end points as well as the state as arguments
+// and sets the appropriate lights in our two dimensional coordination grid
+function executeInstructions(coordinates, from, to, state) {
   var startX = from.split(',')[0],
       endX = to.split(',')[0],
       startY = from.split(',')[1],
@@ -68,7 +70,7 @@ for (var i = 0; i < totalInstructions.length; i++) {
       partTo = instructionParts[3];
 
   // Call function to to set appropriate light grid
-  toggleCoordinateRange(coordStates, partFrom, partTo, partState);
+  executeInstructions(coordStates, partFrom, partTo, partState);
 }
 
 // Iterate over each coordinate state and push into on/off array
