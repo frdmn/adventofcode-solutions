@@ -300,5 +300,8 @@ var input = 'turn on 489,959 through 759,964\n' +
 'turn on 31,760 through 655,892\n' +
 'toggle 628,958 through 811,992';
 
+var input = 'turn on 0,0 through 2,2\n' +
+'toggle 2,2 through 2,8';
+
 // Export to modules, so we can actually use it
 module.exports = input;

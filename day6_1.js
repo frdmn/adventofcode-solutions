@@ -6,8 +6,10 @@ var input = require('./input/day6.js');
 var totalOn = [],
     totalOff = [];
 
-const XLENGTH = 999,
-      YLENGTH = 999;
+// const XLENGTH = 999,
+//       YLENGTH = 999;
+const XLENGTH = 9,
+      YLENGTH = 9;
 
 var totalInstructions = input.split('\n');
 
@@ -83,5 +85,5 @@ for (var coordinates in coordStates) {
 
 // Output total amount of on and off states
 // console.log(coordStates);
-console.log(totalOff.length);
-console.log(totalOn.length);
+console.log('lights on: ' + totalOn.length);
+console.log('lights off: ' + totalOff.length);
