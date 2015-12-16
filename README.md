@@ -6,7 +6,7 @@ My solutions for the [Advent of Code](http://adventofcode.com/) advent calendar.
 
 1. Make sure you've installed all requirements
 2. Clone this repository:
-  `git clone https://github.com/[GitHubUsername]/advent-of-code`
+  `git clone https://github.com/frdmn/adventofcode-solutions.git`
 3. Install dependencies:  
   `npm install`
 4. Run each puzzle using node:  

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.frd.mn:frdmn/advent-of-code.git"
+    "url": "git@github.com:frdmn/adventofcode-solutions.git"
   },
   "author": "Jonas Friedmann <jonas.friedmann@gmail.com>",
   "license": "MIT"
