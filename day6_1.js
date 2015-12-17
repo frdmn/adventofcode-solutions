@@ -6,10 +6,8 @@ var input = require('./input/day6.js');
 var totalOn = [],
     totalOff = [];
 
-// const XLENGTH = 999,
-//       YLENGTH = 999;
-const XLENGTH = 9,
-      YLENGTH = 9;
+const XLENGTH = 999,
+      YLENGTH = 999;
 
 var totalInstructions = input.split('\n');
 
