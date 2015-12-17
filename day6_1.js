@@ -87,6 +87,5 @@ for (var iX = 0; iX < coordStates.length; iX++) {
 }
 
 // Output total amount of on and off states
-// console.log(coordStates);
-console.log('lights on: ' + totalOn.length);
-console.log('lights off: ' + totalOff.length);
+console.log(totalOn.length);
+// => 569999
