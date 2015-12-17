@@ -21,20 +21,22 @@ function executeInstructions(coordinates, from, to, state) {
       startY = from.split(',')[1],
       endY = to.split(',')[1];
 
-  for (var startX = 0; startX <= endX; startX++) {
-    for (var startY = 0; startY <= endY; startY++) {
-      var currentState = coordinates[startX + ',' + startY];
+  for (var iX = startX; iX <= endX; iX++) {
+    for (var iY = startY; iY <= endY; iY++) {
+      var currentState = coordinates[iX][iY];
 
       if (state === 'toggle') {
-        if (currentState === 'on') {
-          var newState = 'off';
+        if (currentState === true) {
+          var newState = false;
         } else {
-          var newState = 'on';
+          var newState = true;
         }
-      } else {
-        var newState = state;
+      } else if(state === 'on') {
+        var newState = true;
+      } else if(state === 'off') {
+        var newState = false;
       }
-      coordinates[startX + ',' + startY] = newState;
+      coordinates[iX][iY] = newState;
     }
   }
 }
@@ -42,10 +44,11 @@ function executeInstructions(coordinates, from, to, state) {
 /* Logic */
 
 // Generate initial coordinate grid to store states of each light
-var coordStates = {};
+var coordStates = [];
 for (var iX = 0; iX <= XLENGTH; iX++) {
+  coordStates[iX] = []
   for (var iY = 0; iY <= YLENGTH; iY++) {
-    coordStates[iX + ',' + iY] = 'off';
+    coordStates[iX][iY] = false;
   }
 }
 
@@ -72,13 +75,13 @@ for (var i = 0; i < totalInstructions.length; i++) {
 }
 
 // Iterate over each coordinate state and push into on/off array
-for (var coordinates in coordStates) {
-  if (coordStates.hasOwnProperty(coordinates)) {
-    var state = coordStates[coordinates];
-    if (state === 'off') {
-      totalOff.push(coordinates);
+for (var iX = 0; iX < coordStates.length; iX++) {
+  for (var iY = 0; iY < coordStates[iX].length; iY++) {
+    var state = coordStates[iX][iY];
+    if (state === false) {
+      totalOff.push(iX + ',' + iY);
     } else {
-      totalOn.push(coordinates);
+      totalOn.push(iX + ',' + iY);
     }
   }
 }
