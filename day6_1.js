@@ -16,10 +16,10 @@ var totalInstructions = input.split('\n');
 // Function that takes the coordination array, start and end points as well as the state as arguments
 // and sets the appropriate lights in our two dimensional coordination grid
 function executeInstructions(coordinates, from, to, state) {
-  var startX = from.split(',')[0],
-      endX = to.split(',')[0],
-      startY = from.split(',')[1],
-      endY = to.split(',')[1];
+  var startX = +from.split(',')[0],
+      endX = +to.split(',')[0],
+      startY = +from.split(',')[1],
+      endY = +to.split(',')[1];
 
   for (var iX = startX; iX <= endX; iX++) {
     for (var iY = startY; iY <= endY; iY++) {
